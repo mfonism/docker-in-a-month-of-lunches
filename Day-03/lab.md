@@ -59,7 +59,7 @@ You now have a new image `mfon/ch03-lab:custom` with your updated file baked in.
 You may confirm this by running a container from the image with an interactive terminal:
 
 ```sh
-docker container run -it mfon/ch03-lab:custom-v2 sh
+docker container run -it mfon/ch03-lab:custom sh
 ```
 
 Then, from inside the container, list the files and read the contents:
