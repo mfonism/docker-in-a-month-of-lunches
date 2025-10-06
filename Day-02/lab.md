@@ -1,10 +1,10 @@
-# 🔧 Lab — Replace the Homepage Content
+# Lab &mdash; Replace the Homepage Content
 
 ## The Task
 
 We were asked to run the website container from the chapter, but replace the `index.html` file so that when we browse to the container, we see a different home page.
 
-## 🪞 Hindsight
+## Hindsight
 
 I wrongly convinced myself that one could only copy files _out_ of a container &mdash; not _into_ one &mdash; so I ended up editing the file directly from inside the container.
 
