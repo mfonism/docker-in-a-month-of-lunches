@@ -48,3 +48,26 @@ CMD ["/web/server"]
 
 COPY index.html .
 ```
+
+---
+
+After looking at the author's solution, I came up with another:
+
+```Dockerfile
+FROM diamol/golang:2e AS builder
+
+WORKDIR /build
+COPY go.mod main.go .
+RUN go build -o server
+RUN chmod +x server
+
+FROM diamol/base:2e
+
+WORKDIR /web
+COPY --from=builder /build/server .
+COPY index.html .
+
+EXPOSE 80
+ENV USER=sixeyed
+CMD ["./server"]
+```
